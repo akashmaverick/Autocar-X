@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutocarX</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- ✅ Top Bar -->
+    <div class="top-bar d-none d-xl-block">
+      <div class="container">
+        <div class="left-info">
+          <div>
+            <i class="fas fa-envelope"></i> Email Address: autocarx@gmail.com
+          </div>
+          <div>
+            <i class="fas fa-phone-alt"></i> Contact Number: +91 7894561230
+          </div>
+        </div>
+        <div class="right-info">
+          <i class="fas fa-location-dot"></i>
+          <span>Location:</span>
+          <select>
+            <option selected>Los Angeles</option>
+            <option>New York</option>
+            <option>Chicago</option>
+            <option>Houston</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar-wrapper">
+      <div class="navbar-container">
+        <div class="logo"><span>C</span> AUTOCAR <strong>X</strong></div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">Spare Parts</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="nav-icons">
+          <i class="fas fa-magnifying-glass"></i>
+          <i class="fas fa-cart-shopping"></i>
+          <a
+            href="#"
+            class="login-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+            ><span>Log In</span></a
+          >
+        </div>
+        <button class="hamburger" id="hamburgerBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="close-btn" id="closeBtn">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <div class="mobile-topbar">
+        <div>
+          <i class="fas fa-envelope"></i> <span>autocarx@gmail.com</span>
+        </div>
+        <div><i class="fas fa-phone-alt"></i> <span>+91 7894561230</span></div>
+        <div>
+          <i class="fas fa-location-dot"></i> <span>Location:</span>
+          <select>
+            <option selected>Los Angeles</option>
+            <option>New York</option>
+            <option>Chicago</option>
+            <option>Houston</option>
+          </select>
+        </div>
+      </div>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Spare Parts</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+      <div class="mobile-icons">
+        <i class="fas fa-magnifying-glass"></i>
+        <i class="fas fa-cart-shopping"></i>
+      </div>
+      <a
+        href="#"
+        class="login-btn-mobile"
+        data-bs-toggle="modal"
+        data-bs-target="#loginModal"
+        ><span>Log In</span></a
+      >
+    </div>
+
+    <!--Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content login-modal-custom position-relative">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold" id="loginModalLabel">Log In</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body d-flex flex-column align-items-center justify-content-center p-4 pt-0"
+          >
+            <p class="text-muted mb-4">Lorem ipsum dolor sit amet.</p>
+            <input
+              type="text"
+              class="form-control mb-3"
+              placeholder="Username"
+            />
+            <input
+              type="password"
+              class="form-control mb-2"
+              placeholder="Password"
+            />
+            <div class="w-100 text-end mb-3">
+              <a
+                href="#"
+                class="text-decoration-none text-secondary"
+                style="font-size: 14px"
+                >Forget Password?</a
+              >
+            </div>
+            <button
+              class="btn w-100 text-white mb-3"
+              style="background-color: #ff3434"
+            >
+              Log In
+            </button>
+            <div class="text-muted mb-3">or</div>
+            <button
+              class="btn btn-light w-100 mb-2 d-flex align-items-center justify-content-center gap-2 shadow-sm border"
+            >
+              <img src="./images/g-logo.png" alt="Google" style="width: 20px" />
+              <span>Login with Google</span>
+            </button>
+            <button
+              class="btn w-100 d-flex align-items-center justify-content-center gap-2"
+              style="background-color: #3b5998; color: #fff"
+            >
+              <i class="fab fa-facebook-f"></i>
+              <span>Login with Facebook</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Hero Section -->
+    <section class="hero-section">
+      <div class="hero-bg">
+        <div
+          class="d-flex flex-xl-row flex-column align-items-center justify-content-between hero-inner"
+        >
+          <!--Left Text -->
+          <div class="hero-left-text">
+            <h1 class="hero-title">Take care of your car in the garage.</h1>
+            <p class="hero-subtitle mt-3">
+              At vitae commodo amet libero tortor blandit risus condimentum
+              mauris. Cras arcu tortor aenean turpis massa mauris ac mi facilisi
+              cursus aliquam a ac maecenas purus amet sapien id suspendisse
+              porttitor tempor at donec massa nibh massa urna et.
+            </p>
+            <a href="#" class="btn animated-btn schedule-btn mt-4"
+              ><span>Schedule an Appointment</span></a
+            >
+          </div>
+
+          <!--Right Form -->
+          <div class="hero-form-wrapper mt-xl-0 mt-5">
+            <form class="appointment-form px-4 pt-4">
+              <h5 class="text-white text-center mb-4">PERSONAL DETAILS</h5>
+              <div class="d-flex mb-3 justify-content-between">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  class="form-control me-3"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  class="form-control"
+                />
+              </div>
+              <div class="mb-4">
+                <input
+                  type="email"
+                  placeholder="Email Address (Optional)"
+                  class="form-control w-100"
+                />
+              </div>
+
+              <h5 class="text-white text-center mb-4">BOOKING DETAILS</h5>
+              <div class="d-flex mb-3 justify-content-between">
+                <select class="form-select me-3">
+                  <option selected disabled>Car</option>
+                  <option>Honda</option>
+                  <option>Hyundai</option>
+                </select>
+                <select class="form-select">
+                  <option selected disabled>Service Details</option>
+                  <option>Repair</option>
+                  <option>Oil Change</option>
+                </select>
+              </div>
+
+              <div class="d-flex mb-4 justify-content-between">
+                <select class="form-select me-3">
+                  <option selected disabled>Date/Time</option>
+                  <option>Today</option>
+                </select>
+                <select class="form-select">
+                  <option selected disabled>Location</option>
+                  <option>Chennai</option>
+                </select>
+              </div>
+
+              <div class="text-center">
+                <a href="#" class="btn animated-btn submit-btn"
+                  ><span>Book an Appointment</span></a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Services Section -->
+    <section class="services-section py-5">
+      <div class="container-fluid px-5">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold text-capitalize">Services</h2>
+          <p class="text-muted text-capitalize mb-4">
+            we offer a wide range of car services
+          </p>
+        </div>
+
+        <div class="row justify-content-center gy-4">
+          <!--Service Card 1 -->
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div
+              class="service-card d-flex flex-column justify-content-between p-4"
+            >
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="./images/Group 220.png"
+                  alt="Service Icon"
+                  class="me-3 rounded"
+                />
+                <h5 class="mb-0 text-capitalize">General Services</h5>
+              </div>
+              <p class="flex-grow-1">
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#" class="see-more"
+                >See more <i class="fas fa-long-arrow-alt-right ms-2"></i
+              ></a>
+            </div>
+          </div>
+
+          <!--Service Card 2 -->
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div
+              class="service-card d-flex flex-column justify-content-between p-4"
+            >
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="./images/Group 221.png"
+                  alt="Service Icon"
+                  class="me-3 rounded"
+                />
+                <h5 class="mb-0 text-capitalize">Wheels on Tyres</h5>
+              </div>
+              <p class="flex-grow-1">
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#" class="see-more"
+                >See more <i class="fas fa-long-arrow-alt-right ms-2"></i
+              ></a>
+            </div>
+          </div>
+
+          <!--Service Card 3 -->
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div
+              class="service-card d-flex flex-column justify-content-between p-4"
+            >
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="./images/Group 222.png"
+                  alt="Service Icon"
+                  class="me-3 rounded"
+                />
+                <h5 class="mb-0 text-capitalize">Fuel Exchange</h5>
+              </div>
+              <p class="flex-grow-1">
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#" class="see-more"
+                >See more <i class="fas fa-long-arrow-alt-right ms-2"></i
+              ></a>
+            </div>
+          </div>
+
+          <!--Service Card 4 -->
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div
+              class="service-card d-flex flex-column justify-content-between p-4"
+            >
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="./images/Group 223.png"
+                  alt="Service Icon"
+                  class="me-3 rounded"
+                />
+                <h5 class="mb-0 text-capitalize">Vehicle Maintenance</h5>
+              </div>
+              <p class="flex-grow-1">
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#" class="see-more"
+                >See more <i class="fas fa-long-arrow-alt-right ms-2"></i
+              ></a>
+            </div>
+          </div>
+
+          <!--Service Card 5 -->
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div
+              class="service-card d-flex flex-column justify-content-between p-4"
+            >
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="./images/Group 224.png"
+                  alt="Service Icon"
+                  class="me-3 rounded"
+                />
+                <h5 class="mb-0 text-capitalize">Battery Charge</h5>
+              </div>
+              <p class="flex-grow-1">
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#" class="see-more"
+                >See more <i class="fas fa-long-arrow-alt-right ms-2"></i
+              ></a>
+            </div>
+          </div>
+
+          <!--Service Card 6 -->
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div
+              class="service-card d-flex flex-column justify-content-between p-4"
+            >
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="./images/Group 225.png"
+                  alt="Service Icon"
+                  class="me-3 rounded"
+                />
+                <h5 class="mb-0 text-capitalize">Oil and Break Checks</h5>
+              </div>
+              <p class="flex-grow-1">
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#" class="see-more"
+                >See more <i class="fas fa-long-arrow-alt-right ms-2"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!--Buttons -->
+        <div class="text-center mt-5">
+          <a href="#" class="btn animated-btn me-3"
+            ><span>Schedule an Appointment</span></a
+          >
+          <a href="#" class="btn animated-btn btn-white border border-dark"
+            ><span>Browse Service</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!--Why Us Section -->
+    <section class="why-us-section py-5">
+      <div class="container">
+        <div class="row align-items-center gx-5">
+          <!--Left Image -->
+          <div class="col-lg-6">
+            <img
+              src="./images/Group 226.png"
+              alt="Why Us Image"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <!--Right Content -->
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <h4 class="section-label">Why Us</h4>
+            <h2 class="section-title">Why Choose Us</h2>
+            <p class="section-desc mb-4">
+              Lorem ipsum dolor sit amet consectetur. Massa varius ultrices
+              pretium fusce massa maecenas. Arcu amet nunc pharetra proin.
+            </p>
+
+            <!--Feature 1 -->
+            <div class="d-flex align-items-start mb-4">
+              <img
+                src="./images/Group 227.png"
+                class="me-3"
+                alt="Experienced Mechanics"
+              />
+              <div>
+                <h5 class="fw-bold mb-2">Experienced Mechanics</h5>
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna.
+                </p>
+              </div>
+            </div>
+
+            <!--Feature 2 -->
+            <div class="d-flex align-items-start mb-4">
+              <img
+                src="./images/Group 229.png"
+                class="me-3"
+                alt="24/7 Service"
+              />
+              <div>
+                <h5 class="fw-bold mb-2">24/7 Quality Service</h5>
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna.
+                </p>
+              </div>
+            </div>
+
+            <!--Feature 3 -->
+            <div class="d-flex align-items-start mb-4">
+              <img src="./images/Group 230.png" class="me-3" alt="Experience" />
+              <div>
+                <h5 class="fw-bold mb-2">10+ Years of Experience</h5>
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna.
+                </p>
+              </div>
+            </div>
+
+            <!--CTA Button -->
+            <a href="#" class="btn why-us-btn mt-4"
+              ><span>Book an Appointment</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Products Section -->
+    <section class="products-section py-5">
+      <div class="container-fluid px-0">
+        <div class="row justify-content-center gx-0">
+          <div class="col-12 px-4 px-xl-5">
+            <div class="text-center mb-4">
+              <p class="text-danger fw-bold mb-1">Products</p>
+              <h2 class="fw-bold">Products from our store</h2>
+            </div>
+
+            <div class="row gx-4 gy-4 justify-content-center">
+              <!--Product Card -->
+              <div class="col-sm-6 col-lg-3 d-flex justify-content-center">
+                <div class="product-card">
+                  <img
+                    src="./images/Group 231.png"
+                    alt="Alloy Breaks pad 2 Set"
+                  />
+                  <h6 class="mt-3">Alloy Breaks pad 2 Set</h6>
+                  <h5 class="fw-bold">$68.00</h5>
+                  <div class="text-danger mb-2">★★★★★</div>
+                  <a href="#" class="btn animated-btn product-btn mb-2 w-100"
+                    ><span>Add to Cart</span></a
+                  >
+                  <a href="#" class="btn animated-btn outline-btn w-100"
+                    ><span>View Details</span></a
+                  >
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-3 d-flex justify-content-center">
+                <div class="product-card">
+                  <img src="./images/Group 232.png" alt="27 CM Car Wheels" />
+                  <h6 class="mt-3">27 CM Car Wheels</h6>
+                  <h5 class="fw-bold">$230.00</h5>
+                  <div class="text-danger mb-2">★★★★★</div>
+                  <a href="#" class="btn animated-btn product-btn mb-2 w-100"
+                    ><span>Add to Cart</span></a
+                  >
+                  <a href="#" class="btn animated-btn outline-btn w-100"
+                    ><span>View Details</span></a
+                  >
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-3 d-flex justify-content-center">
+                <div class="product-card">
+                  <img src="./images/Group 233.png" alt="Car Steering Black" />
+                  <h6 class="mt-3">Car Steering Black</h6>
+                  <h5 class="fw-bold">$95.00</h5>
+                  <div class="text-danger mb-2">★★★★★</div>
+                  <a href="#" class="btn animated-btn product-btn mb-2 w-100"
+                    ><span>Add to Cart</span></a
+                  >
+                  <a href="#" class="btn animated-btn outline-btn w-100"
+                    ><span>View Details</span></a
+                  >
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-3 d-flex justify-content-center">
+                <div class="product-card">
+                  <img
+                    src="./images/Group 234.png"
+                    alt="Alloy Silver Disk Break"
+                  />
+                  <h6 class="mt-3">Alloy Silver Disk Break</h6>
+                  <h5 class="fw-bold">$140.00</h5>
+                  <div class="text-danger mb-2">★★★★★</div>
+                  <a href="#" class="btn animated-btn product-btn mb-2 w-100"
+                    ><span>Add to Cart</span></a
+                  >
+                  <a href="#" class="btn animated-btn outline-btn w-100"
+                    ><span>View Details</span></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!--Checkout Button -->
+            <div class="text-center mt-5 mb-5">
+              <a href="#" class="btn animated-btn checkout-btn"
+                ><span>Checkout Our All Product</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- steps -->
+
+    <section class="py-5 steps-section">
+      <div class="text-center mb-5">
+        <p class="text-danger fw-bold mb-1">Steps</p>
+        <h2 class="fw-bold text-dark">
+          Service Your Car In<br />Just Three Easy Steps
+        </h2>
+      </div>
+
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <!-- Step 1 -->
+          <div class="col-12 col-md-6 col-lg-4 step-box">
+            <div class="d-flex align-items-center mb-2">
+              <div class="step-number step-hover text-white bg-danger me-2">
+                1
+              </div>
+              <div class="flex-grow-1 dashed-line"></div>
+            </div>
+            <h5 class="fw-bold text-dark">Book Your Service</h5>
+            <p class="text-muted small">
+              Choose your car type, service type, date, and location.
+            </p>
+            <img
+              src="./images/Group 235.png"
+              class="img-fluid rounded"
+              alt="Book Service"
+            />
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-12 col-md-6 col-lg-4 step-box">
+            <div class="d-flex align-items-center mb-2">
+              <div
+                class="step-number step-hover text-danger border border-danger me-2"
+              >
+                2
+              </div>
+              <div class="flex-grow-1 dashed-line"></div>
+            </div>
+            <h5 class="fw-bold text-dark">We Pick & Service Your Car</h5>
+            <p class="text-muted small">
+              Our expert mechanics pick up your car or service it at your
+              location.
+            </p>
+            <img
+              src="./images/Group 236.png"
+              class="img-fluid rounded"
+              alt="Pick & Service"
+            />
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-12 col-md-6 col-lg-4 step-box">
+            <div class="d-flex align-items-center mb-2">
+              <div
+                class="step-number step-hover text-danger border border-danger me-2"
+              >
+                3
+              </div>
+              <div class="flex-grow-1 dashed-line"></div>
+            </div>
+            <h5 class="fw-bold text-dark">Track & Get It Delivered</h5>
+            <p class="text-muted small">
+              Track real-time status and get it delivered once ready.
+            </p>
+            <img
+              src="./images/Group 237.png"
+              class="img-fluid rounded"
+              alt="Delivery"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- packages -->
+
+    <section class="py-5 package-section">
+      <div class="text-center mb-5">
+        <p class="text-danger fw-bold mb-1">Packages</p>
+        <h2 class="fw-bold text-dark">Choose the Right Plan for Your Car</h2>
+      </div>
+
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <!-- Basic Plan -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm text-center p-4">
+              <h4 class="fw-bold">Basic Plan</h4>
+              <p class="text-muted">Quarterly</p>
+              <hr />
+              <h3 class="fw-bold">
+                $99 <small class="fs-6 fw-normal text-muted">/ 3 months</small>
+              </h3>
+              <ul
+                class="list-unstyled mt-3 mb-4 text-start mx-auto"
+                style="max-width: 250px"
+              >
+                <li>✅ Basic Car Wash</li>
+                <li>✅ Engine Checkup</li>
+                <li>✅ Tire Pressure Check</li>
+                <li>✅ Interior Cleaning</li>
+              </ul>
+              <a href="#" class="btn btn-subscribe">Subscribe Now</a>
+            </div>
+          </div>
+
+          <!-- Standard Plan -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm text-center p-4">
+              <h4 class="fw-bold">Standard Plan</h4>
+              <p class="text-muted">Bi-Monthly</p>
+              <hr />
+              <h3 class="fw-bold">
+                $124 <small class="fs-6 fw-normal text-muted">/ 2 months</small>
+              </h3>
+              <ul
+                class="list-unstyled mt-3 mb-4 text-start mx-auto"
+                style="max-width: 250px"
+              >
+                <li>✅ All Basic Features</li>
+                <li>✅ Full Body Wash</li>
+                <li>✅ Oil Top-up</li>
+                <li>✅ Brake Check</li>
+              </ul>
+              <a href="#" class="btn btn-subscribe">Subscribe Now</a>
+            </div>
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm text-center p-4">
+              <h4 class="fw-bold">Premium Plan</h4>
+              <p class="text-muted">Monthly</p>
+              <hr />
+              <h3 class="fw-bold">
+                $189 <small class="fs-6 fw-normal text-muted">/ months</small>
+              </h3>
+              <ul
+                class="list-unstyled mt-3 mb-4 text-start mx-auto"
+                style="max-width: 250px"
+              >
+                <li>✅ All Standard Features</li>
+                <li>✅ Free Pickup an Drop</li>
+                <li>✅ AC & Battery Check</li>
+                <li>✅ 24x7 Support</li>
+              </ul>
+              <a href="#" class="btn btn-subscribe">Subscribe Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="py-5 achievements-section">
+      <div class="text-center mb-5">
+        <p class="text-danger fw-bold mb-1">Achievements</p>
+        <h2 class="fw-bold text-dark">Our Track Record Speaks for Itself</h2>
+      </div>
+
+      <div class="container">
+        <div class="row g-4 justify-content-center text-center">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+              <img
+                src="./images/line-md_calendar.png"
+                alt="Icon 1"
+                width="50"
+                height="50"
+                class="mb-3 mx-auto"
+              />
+              <h5 class="fw-bold text-dark">10+ Years of Excellence</h5>
+              <p class="text-muted small mb-0">
+                Lorem ipsum dolor sit amet consectetur. Volutpat bibendum cras
+                libero magna nibh cras. Nec morbi hac vulputate amet tempus.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+              <img
+                src="./images/wpf_happy.png"
+                alt="Icon 2"
+                width="50"
+                height="50"
+                class="mb-3 mx-auto"
+              />
+              <h5 class="fw-bold text-dark">50k+ Happy Clients</h5>
+              <p class="text-muted small mb-0">
+                Lorem ipsum dolor sit amet consectetur. Volutpat bibendum cras
+                libero magna nibh cras. Nec morbi hac vulputate amet tempus.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+              <img
+                src="./images/line-md_calendar.png"
+                alt="Icon 3"
+                width="50"
+                height="50"
+                class="mb-3 mx-auto"
+              />
+              <h5 class="fw-bold text-dark">99% Customer Satisfaction</h5>
+              <p class="text-muted small mb-0">
+                Lorem ipsum dolor sit amet consectetur. Volutpat bibendum cras
+                libero magna nibh cras. Nec morbi hac vulputate amet tempus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonials -->
+
+    <section class="py-5 testimonials-section">
+      <div class="text-center mb-5">
+        <p class="text-danger fw-bold mb-1">Testimonials</p>
+        <h2 class="fw-bold text-dark">What our clients say about us</h2>
+      </div>
+
+      <div class="container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- CARD 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/65.jpg"
+                  alt="Vanessa Taylor"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">Vanessa Taylor</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  Super smooth process and friendly team. I’ll definitely use
+                  this again for future services!
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/75.jpg"
+                  alt="Evan Daugherty"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">Evan Daugherty</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  Booking a car wash has never been this easy. Amazing job!
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Bryan Cogman"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">Bryan Cogman</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  Very professional service. They even checked my brakes and
+                  gave tips!
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/10.jpg"
+                  alt="David Benioff"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">David Benioff</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  They picked up and returned my car on time. Loved the
+                  experience.
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/34.jpg"
+                  alt="Lisa Ray"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">Lisa Ray</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  Fast and reliable service. Highly recommend to busy car
+                  owners.
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/85.jpg"
+                  alt="Tom Hardy"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">Tom Hardy</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  The detailing was excellent. My car looks brand new again.
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/47.jpg"
+                  alt="Sophia Turner"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">Sophia Turner</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  Amazing platform. Hassle-free car service at your doorstep!
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 8 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/61.jpg"
+                  alt="Chris Evans"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">Chris Evans</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  Great value for money. Loved the oil top-up and tire checks.
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 9 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/19.jpg"
+                  alt="Meena Kapoor"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">Meena Kapoor</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  Excellent service. Staff were helpful and kept me updated.
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 10 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/90.jpg"
+                  alt="Robert Downey"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">Robert Downey</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  I travel a lot. This service saves me a lot of time and
+                  stress.
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 11 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/78.jpg"
+                  alt="Priya Das"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">Priya Das</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  Fantastic app, fast pickup, and super clean car. Five stars!
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+
+            <!-- CARD 12 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/21.jpg"
+                  alt="John Smith"
+                  class="testimonial-img"
+                />
+                <h5 class="fw-bold text-dark mt-3 mb-0">John Smith</h5>
+                <p class="text-muted mb-2">Rider</p>
+                <p class="testimonial-text">
+                  No delays, very professional, and great communication
+                  throughout.
+                </p>
+                <p class="text-danger fs-5">★★★★★</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- stay updated -->
+
+    <section class="newsletter-section py-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <!-- LEFT: IMAGE -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img
+              src="./images/Mask group.png"
+              alt="Newsletter Image"
+              class="img-fluid rounded newsletter-img"
+            />
+          </div>
+
+          <!-- RIGHT: TEXT + FORM -->
+          <div class="col-lg-6 text-start">
+            <h2 class="fw-bold mb-3 text-dark">
+              Stay Updated with Our <br />Newsletter
+            </h2>
+            <p class="text-muted mb-4">
+              Lorem ipsum dolor sit amet consectetur. Volutpat aliquet
+              scelerisque tincidunt tellus viverra suspendisse nunc. Mi ultrices
+              arcu dui senectus aliquet pulvinar nisi. Senectus sit duis risus
+              habitasse eget in et augue. Arcu et nullam sem pharetra.
+              Adipiscing habitant in gravida sem. Nulla.
+            </p>
+
+            <!-- FORM -->
+            <form>
+              <input
+                type="email"
+                class="form-control newsletter-input"
+                placeholder="Enter Your E-Mail"
+              />
+              <button type="submit" class="btn newsletter-btn mt-3">
+                Subscribe Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+     <footer class="footer-section text-white">
+  <div class="container-fluid px-5 px-xl-5" style="max-width: 1600px; padding-left: 120px; padding-right: 120px;">
+    <div class="row py-5">
+
+      <!-- Logo & Newsletter -->
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <h3 class="fw-bold mb-2">
+          <span style="color: #FF3434;">C</span> <em>AUTOCAR X</em>
+        </h3>
+        <p style="color: #ccc;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam justo nec ligula eleifend efficitur.</p>
+
+        <h6 class="mt-4">Subscribe to our newsletter</h6>
+        <form class="mt-3">
+          <input type="email" class="form-control mb-3 footer-input" placeholder="Enter Your E-Mail" />
+          <button type="submit" class="btn subscribe-btn">Subscribe Now</button>
+        </form>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 mb-4 mb-lg-0">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Spare Parts</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </div>
+
+      <!-- Address -->
+      <div class="col-lg-3 mb-4 mb-lg-0">
+        <h6 class="fw-bold mb-3">Address</h6>
+        <p>(323) 661-3953</p>
+        <p>3506 Madera Ave</p>
+        <p>Los Angeles, California(CA), 90039</p>
+      </div>
+
+      <!-- Social Links -->
+      <div class="col-lg-3">
+        <h6 class="fw-bold mb-3">Stay Connected</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li class="d-flex align-items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="social-icon me-2" alt="Facebook" />
+            <span>Facebook</span>
+          </li>
+          <li class="d-flex align-items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="social-icon me-2" alt="Instagram" />
+            <span>Instagram</span>
+          </li>
+          <li class="d-flex align-items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="social-icon me-2" alt="YouTube" />
+            <span>YouTube</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Line -->
+    <div class="border-top border-light pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">© 2025 Autocar X. All rights reserved.</p>
+      <ul class="list-inline mb-0 footer-links">
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+        <li class="list-inline-item"><a href="#">Cookie Settings</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <!--Scripts -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
