@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AutocarX - Car Services</title>
+    <title>AutocarX - Services</title>
 
     <!-- Swiper CSS -->
 
@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./services.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -107,9 +107,9 @@
           <div class="collapse navbar-collapse" id="navbarMain">
             <div class="nav-center d-flex">
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./services.html">Services</a>
+                  <a class="nav-link" href="#">Services</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Spare Parts</a>
@@ -141,8 +141,8 @@
         <span class="close-btn" id="closeMenu">&times;</span>
         <div class="mobile-menu-content">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="./services.html">Services</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Services</a></li>
             <li><a href="#">Spare Parts</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
@@ -161,108 +161,6 @@
         </div>
       </div>
     </header>
-
-    <!-- HERO SECTION -->
-
-    <section class="hero-section">
-      <div class="hero-overlay section-padding">
-        <div class="row align-items-center" data-aos="fade-up">
-          <article class="col-lg-6 text-white hero-text mb-5 mb-lg-0">
-            <h1 class="fw-bold display-4 mb-4">
-              Take Care of your<br />Car in the
-              <span class="highlight">Garage.</span>
-            </h1>
-            <p class="mb-4">
-              At vitae commodo amet libero tortor blandit risus condimentum
-              mauris. Cras arcu tortor aenean turpis massa mauris ac mi facilisi
-              cursus aliquam a ac maecenas purus amet sapien id suspendisse
-              porttitor tempor at donec massa.
-            </p>
-            <a href="#appointment" class="btn btn-liquid"
-              ><span>Schedule an appointment</span></a
-            >
-          </article>
-
-          <aside class="col-lg-6">
-            <form
-              class="hero-form glass-bg p-4 rounded-4"
-              id="appointment"
-              data-aos="zoom-in"
-            >
-              <h6 class="form-heading text-white text-center mb-4">
-                Personal Details
-              </h6>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Full Name"
-                    required
-                  />
-                </div>
-                <div class="col-md-6">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email Address (Optional)"
-                  />
-                </div>
-                <div class="col-12">
-                  <input
-                    type="tel"
-                    class="form-control"
-                    placeholder="Phone Number"
-                    required
-                  />
-                </div>
-              </div>
-
-              <h6 class="form-heading text-white text-center mt-4 mb-3">
-                Booking Details
-              </h6>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Car Number"
-                    required
-                  />
-                </div>
-                <div class="col-md-6">
-                  <select class="form-select" required>
-                    <option disabled selected>Service Details</option>
-                    <option>Oil Change</option>
-                    <option>Tyre Replacement</option>
-                    <option>General Checkup</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <select class="form-select" required>
-                    <option disabled selected>Date / Time</option>
-                    <option>10:00 AM</option>
-                    <option>12:00 PM</option>
-                    <option>03:00 PM</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <select class="form-select" required>
-                    <option disabled selected>Location</option>
-                    <option>Los Angeles</option>
-                    <option>New York</option>
-                    <option>San Francisco</option>
-                  </select>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-liquid mt-4 w-100">
-                <span>Book Appointment</span>
-              </button>
-            </form>
-          </aside>
-        </div>
-      </div>
-    </section>
 
     <!-- LOGIN MODAL -->
 
@@ -321,6 +219,15 @@
         </div>
       </div>
     </div>
+
+    <!-- ✅ Hero Section -->
+    <section
+      class="hero-section d-flex align-items-center justify-content-center text-center text-white"
+    >
+      <div class="container">
+        <h1 class="hero-title fw-bold">Services</h1>
+      </div>
+    </section>
 
     <!-- SERVICES SECTION -->
     <section
@@ -480,6 +387,78 @@
               </div>
             </div>
           </article>
+
+          <!-- Card 7 -->
+          <article class="col-lg-4 col-md-6 d-flex justify-content-center">
+            <div class="service-card d-flex p-4">
+              <img
+                src="./images/Group 248.png"
+                alt="Oil and Break Checks"
+                class="service-icon me-3"
+              />
+              <div class="d-flex flex-column justify-content-between w-100">
+                <div>
+                  <h5 class="fw-bold mb-2">Affordable Price</h5>
+                  <p class="mb-3">
+                    Lorem ipsum dolor sit amet consectetur. A odio venenatis
+                    vitae ut venenatis commodo. Nisi ultricies porta sociis
+                    lorem blandit. Neque mollis.
+                  </p>
+                </div>
+                <a href="#" class="see-more mt-auto"
+                  >See More <span>&rarr;</span></a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="col-lg-4 col-md-6 d-flex justify-content-center">
+            <div class="service-card d-flex p-4">
+              <img
+                src="./images/Group 249.png"
+                alt="Oil and Break Checks"
+                class="service-icon me-3"
+              />
+              <div class="d-flex flex-column justify-content-between w-100">
+                <div>
+                  <h5 class="fw-bold mb-2">Car Diagonstic</h5>
+                  <p class="mb-3">
+                    Lorem ipsum dolor sit amet consectetur. A odio venenatis
+                    vitae ut venenatis commodo. Nisi ultricies porta sociis
+                    lorem blandit. Neque mollis.
+                  </p>
+                </div>
+                <a href="#" class="see-more mt-auto"
+                  >See More <span>&rarr;</span></a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="col-lg-4 col-md-6 d-flex justify-content-center">
+            <div class="service-card d-flex p-4">
+              <img
+                src="./images/Group 250.png"
+                alt="Oil and Break Checks"
+                class="service-icon me-3"
+              />
+              <div class="d-flex flex-column justify-content-between w-100">
+                <div>
+                  <h5 class="fw-bold mb-2">Tire Fix & Replace</h5>
+                  <p class="mb-3">
+                    Lorem ipsum dolor sit amet consectetur. A odio venenatis
+                    vitae ut venenatis commodo. Nisi ultricies porta sociis
+                    lorem blandit. Neque mollis.
+                  </p>
+                </div>
+                <a href="#" class="see-more mt-auto"
+                  >See More <span>&rarr;</span></a
+                >
+              </div>
+            </div>
+          </article>
         </div>
 
         <!-- Action Buttons -->
@@ -586,155 +565,6 @@
       </div>
     </section>
 
-    <!-- Product Section -->
-
-    <section
-      id="products"
-      class="products-section"
-      data-aos="fade-up"
-      data-aos-once="false"
-    >
-      <div class="section-header">
-        <p class="section-tag">Products</p>
-        <h2 class="section-title">Products from our store</h2>
-      </div>
-
-      <div class="products-container">
-        <!-- Card 1 -->
-        <div class="product-card">
-          <img
-            src="./images/Group 231.png"
-            alt="Alloy Breaks pad 2 Set"
-            class="product-img"
-          />
-          <div class="product-body">
-            <p class="product-name">Alloy Breaks pad 2 Set</p>
-            <div class="price-stars">
-              <span class="product-price">$68.00</span>
-              <span class="product-stars">★★★★★</span>
-            </div>
-            <button class="btn-cart">Add to Cart</button>
-            <button class="btn-view">View Details</button>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="product-card">
-          <img
-            src="images/Group 232.png"
-            alt="27 CM Car Wheels"
-            class="product-img"
-          />
-          <div class="product-body">
-            <p class="product-name">27 CM Car Wheels</p>
-            <div class="price-stars">
-              <span class="product-price">$230.00</span>
-              <span class="product-stars">★★★★★</span>
-            </div>
-            <button class="btn-cart">Add to Cart</button>
-            <button class="btn-view">View Details</button>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="product-card">
-          <img
-            src="./images/Group 233.png"
-            alt="Car Steering Black"
-            class="product-img"
-          />
-          <div class="product-body">
-            <p class="product-name">Car Steering Black</p>
-            <div class="price-stars">
-              <span class="product-price">$95.00</span>
-              <span class="product-stars">★★★★★</span>
-            </div>
-            <button class="btn-cart">Add to Cart</button>
-            <button class="btn-view">View Details</button>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="product-card">
-          <img
-            src="./images/Group 234.png"
-            alt="Alloy Silver Disk Break"
-            class="product-img"
-          />
-          <div class="product-body">
-            <p class="product-name">Alloy Silver Disk Break</p>
-            <div class="price-stars">
-              <span class="product-price">$140.00</span>
-              <span class="product-stars">★★★★★</span>
-            </div>
-            <button class="btn-cart">Add to Cart</button>
-            <button class="btn-view">View Details</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="products-btn-wrapper">
-        <button class="btn-checkout">Checkout Our All Product</button>
-      </div>
-    </section>
-
-    <!-- Steps Section -->
-
-    <section
-      id="steps"
-      class="steps-section"
-      data-aos="fade-up"
-      data-aos-once="false"
-    >
-      <div class="container">
-        <p class="section-tag">Steps</p>
-        <h2 class="section-title">
-          Service Your Car In<br />Just Three Easy Steps
-        </h2>
-
-        <div class="steps-row">
-          <!-- Step 1 -->
-          <div class="step-box">
-            <div class="step-header">
-              <span class="step-number">1</span>
-              <hr class="step-line" />
-            </div>
-            <h3 class="step-title">Book Your Service</h3>
-            <p class="step-desc">
-              Choose your car type, service type, date, and location.
-            </p>
-            <img src="images/Group 235.png" alt="Step 1" class="step-image" />
-          </div>
-
-          <!-- Step 2 -->
-          <div class="step-box">
-            <div class="step-header">
-              <span class="step-number">2</span>
-              <hr class="step-line" />
-            </div>
-            <h3 class="step-title">We Pick & Service Your Car</h3>
-            <p class="step-desc">
-              Our expert mechanics pick up your car or service on the go
-            </p>
-            <img src="images/Group 236.png" alt="Step 2" class="step-image" />
-          </div>
-
-          <!-- Step 3 -->
-          <div class="step-box">
-            <div class="step-header">
-              <span class="step-number">3</span>
-              <hr class="step-line" />
-            </div>
-            <h3 class="step-title">Track & Get It Delivered</h3>
-            <p class="step-desc">
-              Track real-time status and get it delivered once ready
-            </p>
-            <img src="images/Group 237.png" alt="Step 3" class="step-image" />
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Packages Section -->
 
     <section class="packages-section" id="packages" data-aos="fade-up">
@@ -789,203 +619,62 @@
       </div>
     </section>
 
-    <!-- Achievements Section -->
+    <!-- Brands -->
 
-    <section id="achievements" class="achievements-section" data-aos="fade-up">
-      <div class="section-tag">Achievements</div>
-      <h2 class="section-title">Our Track Record Speaks for Itself</h2>
+    <!-- ✅ Brand Logos Section -->
+    <section class="brand-section">
+      <div class="container text-center">
+        <h2>
+          We Repair All Makes of <span class="text-danger">Automobiles</span>
+        </h2>
 
-      <div class="achievement-cards">
-        <div class="achievement-card">
-          <img
-            src="./images/line-md_calendar.png"
-            alt="Years of Excellence"
-            class="achievement-icon"
-          />
-          <h3>
-            <span class="counter" data-target="10">0</span>+ Years of Excellence
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Volutpat bibendum cras
-            libero magna nibh cras. Nec morbi hac vulputate amet tempus.
-          </p>
-        </div>
-        <div class="achievement-card">
-          <img
-            src="./images/wpf_happy.png"
-            alt="Happy Clients"
-            class="achievement-icon"
-          />
-          <h3>
-            <span class="counter" data-target="50">0</span>k+ Happy Clients
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Volutpat bibendum cras
-            libero magna nibh cras. Nec morbi hac vulputate amet tempus.
-          </p>
-        </div>
-        <div class="achievement-card">
-          <img
-            src="./images/ic_outline-star.png"
-            alt="Customer Satisfaction"
-            class="achievement-icon"
-          />
-          <h3>
-            <span class="counter" data-target="99">0</span>% Customer
-            Satisfaction
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Volutpat bibendum cras
-            libero magna nibh cras. Nec morbi hac vulputate amet tempus.
-          </p>
-        </div>
-      </div>
-    </section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Cras sed et in . At placerat.
+        </p>
 
-    <!-- TESTIMONIALS -->
-
-    <section class="testimonials-section">
-      <div class="container">
-        <p class="section-subtitle">Testimonials</p>
-        <h2 class="section-title">What our clients say about us</h2>
-
-        <div class="swiper testimonials-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image (3).png" class="testimonial-img" />
-              <h3 class="testimonial-name">Michael Smith</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
+        <div class="brand-slider-wrapper">
+          <div class="brand-slider">
+            <!-- Logos (Duplicated for smooth scrolling) -->
+            <div class="brand-logo">
+              <img src="./images/image 13.png" alt="Porsche" />
+            </div>
+            <div class="brand-logo">
+              <img src="./images/image 14.png" alt="Volkswagen" />
+            </div>
+            <div class="brand-logo">
+              <img src="./images/image 15.png" alt="BMW" />
+            </div>
+            <div class="brand-logo">
+              <img src="./images/image 16.png" alt="Hyundai" />
+            </div>
+            <div class="brand-logo">
+              <img src="./images/image 17.png" alt="Audi" />
+            </div>
+            <div class="brand-logo">
+              <img src="./images/image 18.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image.png" class="testimonial-img" />
-              <h3 class="testimonial-name">Evan Daugherty</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
+            <!-- Duplicate logos for continuous loop -->
+            <div class="brand-logo">
+              <img src="./images/image 13.png" alt="Porsche" />
             </div>
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image (1).png" class="testimonial-img" />
-              <h3 class="testimonial-name">Bryan Cogman</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
+            <div class="brand-logo">
+              <img src="./images/image 14.png" alt="Volkswagen" />
             </div>
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image (2).png" class="testimonial-img" />
-              <h3 class="testimonial-name">David Benioff</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
+            <div class="brand-logo">
+              <img src="./images/image 15.png" alt="BMW" />
             </div>
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image (3).png" class="testimonial-img" />
-              <h3 class="testimonial-name">Sarah Jones</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
+            <div class="brand-logo">
+              <img src="./images/image 16.png" alt="Hyundai" />
             </div>
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image.png" class="testimonial-img" />
-              <h3 class="testimonial-name">Michael Smith</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
+            <div class="brand-logo">
+              <img src="./images/image 17.png" alt="Audi" />
             </div>
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image (1).png" class="testimonial-img" />
-              <h3 class="testimonial-name">Anna Lee</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
-            </div>
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image (2).png" class="testimonial-img" />
-              <h3 class="testimonial-name">John Doe</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
-            </div>
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image (3).png" class="testimonial-img" />
-              <h3 class="testimonial-name">Lisa Ray</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
-            </div>
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image.png" class="testimonial-img" />
-              <h3 class="testimonial-name">Tom Holland</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
-            </div>
-            <div class="swiper-slide testimonial-card">
-              <img src="./images/image (1).png" class="testimonial-img" />
-              <h3 class="testimonial-name">Emma Watson</h3>
-              <p class="testimonial-role">Rider</p>
-              <p class="testimonial-text">
-                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
-                vel.
-              </p>
-              <div class="testimonial-stars">★★★★★</div>
+            <div class="brand-logo">
+              <img src="./images/image 18.png" alt="Mercedes-Benz" />
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- NEWSLETTER SECTION -->
-
-    <section class="newsletter-section" data-aos="fade-up">
-      <div class="newsletter-image" data-aos="zoom-in" data-aos-delay="200">
-        <img src="./images/Mask group.png" alt="Mechanic with car" />
-      </div>
-      <div class="newsletter-content" data-aos="fade-left" data-aos-delay="400">
-        <h2>Stay Updated with Our Newsletter</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Volutpat aliquet scelerisque
-          tincidunt tellus viverra suspendisse nunc. Mi ultrices arcu dui
-          senectus aliquet pulvinar nisi. Senectus sit duis risus habitasse eget
-          in et augue. Arcu et nullam sem pharetra. Adipiscing habitant in
-          gravida sem. Nulla.
-        </p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter Your E-Mail" required />
-          <button type="submit">Subscribe Now</button>
-        </form>
       </div>
     </section>
 
@@ -1015,7 +704,7 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Spare Parts</a></li>
-            <li><a href="./services.html">Services</a></li>
+            <li><a href="#">Services</a></li>
           </ul>
         </div>
 
@@ -1048,14 +737,9 @@
       </div>
     </footer>
 
-    <!-- SCRIPTS -->
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="./script.js"></script>
+    <script src="./services.js"></script>
   </body>
 </html>
