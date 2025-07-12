@@ -1,32 +1,78 @@
-const hamburger = document.getElementById('hamburgerToggle');
-const sidebar = document.getElementById('mobileMenu');
+AOS.init({ once: false });
 
-hamburger.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
-  hamburger.classList.toggle('open');
-});
+      document.getElementById("hamburgerBtn").onclick = () => {
+        document.getElementById("mobileMenu").classList.add("active");
+      };
+      document.getElementById("closeMenu").onclick = () => {
+        document.getElementById("mobileMenu").classList.remove("active");
+      };
 
-document.querySelectorAll('.mobile-sidebar a').forEach(link => {
-  link.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-    hamburger.classList.remove('open');
-  });
-});
+      function selectLocation(name) {
+        document.getElementById("locationText").textContent = name;
+      }
 
-document.addEventListener('click', (e) => {
-  if (
-    sidebar.classList.contains('active') &&
-    !sidebar.contains(e.target) &&
-    !hamburger.contains(e.target)
-  ) {
-    sidebar.classList.remove('active');
-    hamburger.classList.remove('open');
-  }
-});
+      $(".mobile-sidebar .btn-login").on("click", function () {
+        $("#mobileMenu").removeClass("active");
+      });
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    sidebar.classList.remove('active');
-    hamburger.classList.remove('open');
-  }
-});
+      // Counter Animation
+      document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll(".counter");
+        const speed = 200;
+
+        const animateCounter = (counter) => {
+          const updateCount = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(updateCount, 20);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        };
+
+        const observer = new IntersectionObserver(
+          (entries, observerRef) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observerRef.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 1 }
+        );
+
+        counters.forEach((counter) => observer.observe(counter));
+      });
+
+      // Swiper
+
+      const swiper = new Swiper(".testimonials-swiper", {
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 4,
+        spaceBetween: 30,
+        breakpoints: {
+          1200: {
+            slidesPerView: 4,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          0: {
+            slidesPerView: 1,
+          },
+        },
+      });
