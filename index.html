@@ -6,12 +6,14 @@
     <title>AutocarX - Car Services</title>
 
     <!-- Swiper CSS -->
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
 
     <!-- Bootstrap, FontAwesome, AOS -->
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -29,6 +31,7 @@
   </head>
   <body>
     <!-- HEADER -->
+
     <header>
       <div class="topbar section-padding">
         <div class="container-fluid px-0">
@@ -160,6 +163,7 @@
     </header>
 
     <!-- HERO SECTION -->
+
     <section class="hero-section">
       <div class="hero-overlay section-padding">
         <div class="row align-items-center" data-aos="fade-up">
@@ -260,7 +264,8 @@
       </div>
     </section>
 
-    <!-- LOGIN MODAL (outside header for z-index) -->
+    <!-- LOGIN MODAL -->
+
     <div class="modal fade" id="loginModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content login-form">
@@ -785,6 +790,7 @@
     </section>
 
     <!-- Achievements Section -->
+
     <section id="achievements" class="achievements-section" data-aos="fade-up">
       <div class="section-tag">Achievements</div>
       <h2 class="section-title">Our Track Record Speaks for Itself</h2>
@@ -845,10 +851,17 @@
 
         <div class="swiper testimonials-swiper">
           <div class="swiper-wrapper">
-            <!-- Repeat this card 12 times -->
+            <div class="swiper-slide testimonial-card">
+              <img src="./images/image (3).png" class="testimonial-img" />
+              <h3 class="testimonial-name">Michael Smith</h3>
+              <p class="testimonial-role">Rider</p>
+              <p class="testimonial-text">
+                Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
+                vel.
+              </p>
+              <div class="testimonial-stars">★★★★★</div>
+            </div>
 
-            <!-- Add 11 more cards with same structure -->
-            <!-- Dummy repeat -->
             <div class="swiper-slide testimonial-card">
               <img src="./images/image.png" class="testimonial-img" />
               <h3 class="testimonial-name">Evan Daugherty</h3>
@@ -953,6 +966,87 @@
         </div>
       </div>
     </section>
+
+    <!-- NEWSLETTER SECTION -->
+
+    <section class="newsletter-section" data-aos="fade-up">
+      <div class="newsletter-image" data-aos="zoom-in" data-aos-delay="200">
+        <img src="./images/Mask group.png" alt="Mechanic with car" />
+      </div>
+      <div class="newsletter-content" data-aos="fade-left" data-aos-delay="400">
+        <h2>Stay Updated with Our Newsletter</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Volutpat aliquet scelerisque
+          tincidunt tellus viverra suspendisse nunc. Mi ultrices arcu dui
+          senectus aliquet pulvinar nisi. Senectus sit duis risus habitasse eget
+          in et augue. Arcu et nullam sem pharetra. Adipiscing habitant in
+          gravida sem. Nulla.
+        </p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter Your E-Mail" required />
+          <button type="submit">Subscribe Now</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer" data-aos="fade-up">
+      <div class="footer-container">
+        <!-- Column 1: Logo & Newsletter -->
+        <div class="footer-col">
+          <h2 class="footer-logo"><span>C</span> <strong>AUTOCAR X</strong></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam
+            justo nec ligula eleifend efficitur.
+          </p>
+
+          <h4>Subscribe to our newsletter</h4>
+          <form class="footer-form">
+            <input type="email" placeholder="Enter Your E-Mail" required />
+            <button type="submit">Subscribe Now</button>
+          </form>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Spare Parts</a></li>
+            <li><a href="#">Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Address -->
+        <div class="footer-col">
+          <h4>Address</h4>
+          <p>(323) 661-3953</p>
+          <p>3506 Madera Ave</p>
+          <p>Los Angeles, California(CA), 90039</p>
+        </div>
+
+        <!-- Column 4: Social -->
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Autocar X. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </footer>
 
     <!-- SCRIPTS -->
 
