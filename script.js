@@ -1,35 +1,32 @@
-const hamburgerBtn = document.getElementById("hamburgerBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const closeBtn = document.getElementById("closeBtn");
+const hamburger = document.getElementById('hamburgerToggle');
+const sidebar = document.getElementById('mobileMenu');
 
-hamburgerBtn.addEventListener("click", () => {
-  mobileMenu.classList.add("active");
+hamburger.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+  hamburger.classList.toggle('open');
 });
 
-closeBtn.addEventListener("click", () => {
-  mobileMenu.classList.remove("active");
-});
-
-document.querySelectorAll(".mobile-menu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.remove("active");
+document.querySelectorAll('.mobile-sidebar a').forEach(link => {
+  link.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    hamburger.classList.remove('open');
   });
 });
 
-// testimonials swiper
+document.addEventListener('click', (e) => {
+  if (
+    sidebar.classList.contains('active') &&
+    !sidebar.contains(e.target) &&
+    !hamburger.contains(e.target)
+  ) {
+    sidebar.classList.remove('active');
+    hamburger.classList.remove('open');
+  }
+});
 
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    576: { slidesPerView: 1.5 },
-    768: { slidesPerView: 2 },
-    992: { slidesPerView: 3 },
-    1200: { slidesPerView: 4 }
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    sidebar.classList.remove('active');
+    hamburger.classList.remove('open');
   }
 });
