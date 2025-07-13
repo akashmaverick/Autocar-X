@@ -114,7 +114,9 @@
                   <a class="nav-link" href="./loginServices.html">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./loginsparePart.html">Spare Parts</a>
+                  <a class="nav-link" href="./loginsparePart.html"
+                    >Spare Parts</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./loginAbout.html">About Us</a>
@@ -187,19 +189,34 @@
             <i class="fas fa-shopping-cart"></i>
           </div>
 
-          <!-- ✅ Profile info (mobile view after login) -->
-          <div class="d-flex align-items-center gap-2 mt-4">
-            <img
-              src="./images/Group 12.png"
-              alt="Harpreet Kaur"
-              style="
-                width: 36px;
-                height: 36px;
-                border-radius: 10px;
-                object-fit: cover;
-              "
-            />
-            <span class="text-white">Harpreet Kaur</span>
+          <!-- ✅ Profile info (mobile view after login) with transparent dropdown -->
+          <div class="mobile-profile position-relative mt-4">
+            <button
+              class="d-flex align-items-center gap-2 w-100"
+              id="mobileProfileDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="background: none; border: none; padding: 0; color: white"
+            >
+              <img
+                src="./images/Group 12.png"
+                alt="Harpreet Kaur"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  border-radius: 10px;
+                  object-fit: cover;
+                "
+              />
+              <span class="text-white">Harpreet Kaur</span>
+            </button>
+            <ul
+              class="dropdown-menu transparent-dropdown mt-2"
+              style="position: absolute; top: 100%; left: 0"
+              aria-labelledby="mobileProfileDropdown"
+            >
+              <li><a class="dropdown-item text-danger" href="./index.html">Logout</a></li>
+            </ul>
           </div>
         </div>
       </div>

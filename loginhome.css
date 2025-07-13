@@ -201,8 +201,28 @@ body {
 
 /* Dropdown hover styling */
 .dropdown-menu .dropdown-item:hover {
-  background-color: #f8f9fa;
+  background-color: white;
 }
+
+/* Transparent mobile profile dropdown */
+.transparent-dropdown {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+}
+
+.transparent-dropdown .dropdown-item {
+  background-color: transparent !important;
+  color: #f3434f !important;
+  padding-left: 0.5rem;
+}
+
+.transparent-dropdown .dropdown-item:hover {
+  background-color: transparent !important;
+  text-decoration: underline;
+}
+
 
 @media (max-width: 991.98px) {
   .navbar .navbar-collapse {
