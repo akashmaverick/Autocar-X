@@ -189,7 +189,7 @@ body {
   font-size: 20px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
   .navbar .navbar-collapse {
     display: none !important;
   }
@@ -1288,7 +1288,7 @@ body {
 .footer-form input {
   width: 100%;
   max-width: 450px;
-  height: 44px; /* Shorter input */
+  height: 44px;
   padding: 0 16px;
   font-size: 13px;
   background: transparent;
@@ -1300,7 +1300,7 @@ body {
 .footer-form button {
   width: 100%;
   max-width: 450px;
-  height: 44px; /* Shorter button */
+  height: 44px;
   background-color: #ff3c3c;
   color: #fff;
   border: none;
@@ -1345,7 +1345,7 @@ body {
 
 .footer-bottom {
   max-width: 1280px;
-  margin: 25px auto 0; /* Smaller top margin */
+  margin: 25px auto 0;
   border-top: 1px solid #ccc;
   padding-top: 15px;
   display: flex;

@@ -189,7 +189,7 @@ body {
   font-size: 20px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
   .navbar .navbar-collapse {
     display: none !important;
   }
@@ -730,7 +730,7 @@ body {
 .site-footer {
   background-color: #2a2a2a;
   color: #fff;
-  padding: 30px 120px 20px; /* Reduced padding */
+  padding: 30px 120px 20px;
 }
 
 .footer-container {
@@ -738,7 +738,7 @@ body {
   flex-wrap: wrap;
   max-width: 1280px;
   margin: 0 auto;
-  gap: 30px; /* Reduced gap */
+  gap: 30px;
   justify-content: space-between;
 }
 
@@ -748,7 +748,7 @@ body {
 }
 
 .footer-logo {
-  font-size: 20px; /* Smaller font */
+  font-size: 20px;
   color: #fff;
   margin-bottom: 10px;
 }
@@ -796,7 +796,7 @@ body {
 .footer-form input {
   width: 100%;
   max-width: 450px;
-  height: 44px; /* Shorter input */
+  height: 44px;
   padding: 0 16px;
   font-size: 13px;
   background: transparent;
@@ -808,7 +808,7 @@ body {
 .footer-form button {
   width: 100%;
   max-width: 450px;
-  height: 44px; /* Shorter button */
+  height: 44px;
   background-color: #ff3c3c;
   color: #fff;
   border: none;
@@ -853,7 +853,7 @@ body {
 
 .footer-bottom {
   max-width: 1280px;
-  margin: 25px auto 0; /* Smaller top margin */
+  margin: 25px auto 0;
   border-top: 1px solid #ccc;
   padding-top: 15px;
   display: flex;
