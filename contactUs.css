@@ -31,6 +31,10 @@ body {
   }
 }
 
+.contact-address-section{
+  background-color: #f1f1f1 !important;
+}
+
 .topbar {
   background-color: #ff3737;
   font-size: 14px;

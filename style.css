@@ -416,7 +416,7 @@ body {
 /* Why Choose Us Section */
 
 .why-choose-us-section {
-  background-color: #f9f9f9;
+  background-color: #f1f1f1;
   padding-block: 100px;
 }
 
@@ -498,7 +498,7 @@ body {
 
 .products-section {
   padding: 100px 120px;
-  background-color: #fff;
+  background-color: #f1f1f1;
 }
 
 .section-header {
@@ -660,7 +660,7 @@ body {
 
 .steps-section {
   padding: 80px 120px;
-  background-color: white;
+  background-color: #f1f1f1;
   color: #fff;
   text-align: center;
 }
@@ -772,7 +772,7 @@ body {
 
 .packages-section {
   padding: 80px 120px;
-  background-color: white;
+  background-color: #f1f1f1;
   text-align: center;
 }
 
@@ -927,7 +927,7 @@ body {
 
 .achievements-section {
   padding: 80px 20px;
-  background: #fff;
+  background: #f1f1f1;
   text-align: center;
 }
 
@@ -957,7 +957,7 @@ body {
   flex: 1 1 calc(33.333% - 40px);
   max-width: 360px;
   min-width: 280px;
-  background: #f7f7f7;
+  background: white;
   border-radius: 10px;
   padding: 30px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -1019,7 +1019,7 @@ body {
 
 .testimonials-section {
   padding: 80px 20px;
-  background-color: white;
+  background-color: #f1f1f1;
   text-align: center;
 }
 
@@ -1094,7 +1094,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 80px 120px;
-  background-color: white;
+  background-color: #f1f1f1;
   gap: 40px;
 }
 

@@ -21,7 +21,6 @@ body {
   background-color: #f1f1f1;
 }
 
-
 .section-padding {
   padding-inline: var(--side-padding);
 }
@@ -279,8 +278,13 @@ body {
 
 /* Products Section */
 
+.products-section{
+  background-color: #f1f1f1 !important;
+}
+
 .search-bar-container {
   margin: 25px 0;
+  background-color: #f1f1f1;
 }
 
 .search-bar-row {
@@ -293,7 +297,7 @@ body {
   height: 48px;
   font-size: 14px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #f1f1f1;
   padding: 0 15px;
 }
 
@@ -452,6 +456,85 @@ aside .form-check {
   aside,
   #filtersModal .modal-body {
     font-size: 13px;
+  }
+}
+
+/* BRANDS */
+
+.brand-section {
+  padding: 60px 0;
+  background-color: #f1f1f1;
+}
+
+.brand-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.brand-section .text-danger {
+  color: #ff3434 !important;
+}
+
+.brand-slider-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.brand-slider {
+  display: flex;
+  gap: 40px;
+  animation: scrollBrand 30s linear infinite;
+  width: max-content;
+}
+
+.brand-logo {
+  background-color: #e3e3e3;
+  padding: 20px;
+  min-width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo img {
+  max-width: 100%;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scrollBrand {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+  .brand-logo {
+    min-width: 150px;
+    height: 80px;
+    padding: 15px;
+  }
+
+  .brand-section h2 {
+    font-size: 22px;
+  }
+
+  .brand-slider {
+    gap: 20px;
   }
 }
 

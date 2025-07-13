@@ -65,3 +65,30 @@ const locationSwiper = new Swiper(".locations-swiper", {
   freeMode: true,
   grabCursor: true,
 });
+
+// Swiper
+
+const swiper = new Swiper(".testimonials-swiper", {
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  speed: 1000,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1280: {
+      slidesPerView: 4,
+    },
+  },
+});
