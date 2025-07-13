@@ -121,6 +121,11 @@ body {
   z-index: 2;
 }
 
+.internal-login {
+  color: white;
+  text-decoration: none;
+}
+
 .nav-link {
   color: white !important;
   font-weight: 500;
