@@ -223,7 +223,7 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   .navbar .navbar-collapse {
     display: none !important;
   }
@@ -283,7 +283,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay */
   z-index: 1;
 }
 
@@ -414,7 +414,7 @@ body {
 }
 
 .locations-section {
-  padding: 60px 0 100px;
+  padding: 60px 0 100px; /* Top and bottom spacing fixed */
   background-color: #f1f1f1;
 }
 
@@ -537,7 +537,7 @@ body {
 .site-footer {
   background-color: #2a2a2a;
   color: #fff;
-  padding: 30px 120px 20px;
+  padding: 30px 120px 20px; /* Reduced padding */
 }
 
 .footer-container {
@@ -545,7 +545,7 @@ body {
   flex-wrap: wrap;
   max-width: 1280px;
   margin: 0 auto;
-  gap: 30px;
+  gap: 30px; /* Reduced gap */
   justify-content: space-between;
 }
 
@@ -555,7 +555,7 @@ body {
 }
 
 .footer-logo {
-  font-size: 20px;
+  font-size: 20px; /* Smaller font */
   color: #fff;
   margin-bottom: 10px;
 }
@@ -603,7 +603,7 @@ body {
 .footer-form input {
   width: 100%;
   max-width: 450px;
-  height: 44px;
+  height: 44px; /* Shorter input */
   padding: 0 16px;
   font-size: 13px;
   background: transparent;
@@ -615,7 +615,7 @@ body {
 .footer-form button {
   width: 100%;
   max-width: 450px;
-  height: 44px;
+  height: 44px; /* Shorter button */
   background-color: #ff3c3c;
   color: #fff;
   border: none;
@@ -660,7 +660,7 @@ body {
 
 .footer-bottom {
   max-width: 1280px;
-  margin: 25px auto 0;
+  margin: 25px auto 0; /* Smaller top margin */
   border-top: 1px solid #ccc;
   padding-top: 15px;
   display: flex;
