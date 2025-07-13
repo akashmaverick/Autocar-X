@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutocarX - Services</title>
+
+    <!-- Swiper CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Bootstrap, FontAwesome, AOS -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./sparePart.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <div class="topbar section-padding">
+        <div class="container-fluid px-0">
+          <div class="row text-center text-md-start">
+            <div
+              class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start gap-2"
+            >
+              <i class="fas fa-envelope"></i>
+              <span><strong>Email Address:</strong> AutocarX@gmail.com</span>
+            </div>
+            <div
+              class="col-12 col-md-4 d-flex align-items-center justify-content-center gap-2"
+            >
+              <i class="fas fa-phone-alt"></i>
+              <span><strong>Contact Number:</strong> +91-7686860145</span>
+            </div>
+            <div
+              class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end gap-2"
+            >
+              <i class="fas fa-crosshairs"></i>
+              <div class="dropdown">
+                <button
+                  class="dropdown-toggle location-btn"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <strong>Location:</strong>
+                  <u id="locationText">Los Angeles</u>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="selectLocation('Los Angeles')"
+                      >Los Angeles</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="selectLocation('New York')"
+                      >New York</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="selectLocation('San Francisco')"
+                      >San Francisco</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg section-padding">
+        <div
+          class="container-fluid px-0 d-flex align-items-center justify-content-between"
+        >
+          <a class="navbar-brand" href="./index.html"
+            ><img src="./images/Group 6 (1).png" alt="AutocarX Logo"
+          /></a>
+          <button class="navbar-toggler" type="button" id="hamburgerBtn">
+            <i class="fas fa-bars text-white fs-4"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <div class="nav-center d-flex">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./sparePart.html">Spare Parts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contactUs.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-icons">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-shopping-cart"></i>
+              <button
+                class="btn btn-login"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                <span>Log In</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="mobile-sidebar" id="mobileMenu">
+        <span class="close-btn" id="closeMenu"
+          ><i class="fa-solid fa-x"></i
+        ></span>
+        <div class="mobile-menu-content">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./sparePart.html">Spare Parts</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contactUs.html">Contact</a></li>
+          </ul>
+          <div class="mobile-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <button
+            class="btn btn-login mt-4"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            <span>Log In</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- LOGIN MODAL -->
+
+    <div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content login-form">
+          <div class="modal-header justify-content-center position-relative">
+            <h5 class="modal-title text-center">Log In</h5>
+            <button
+              type="button"
+              class="btn-close position-absolute end-0 me-3"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-center text-muted mb-4">
+              How to i get started lorem ipsum dolor at?
+            </p>
+            <input
+              type="text"
+              class="form-control mb-3"
+              placeholder="User Name*"
+              required
+            />
+            <input
+              type="password"
+              class="form-control mb-3"
+              placeholder="Password*"
+              required
+            />
+            <div class="d-flex justify-content-end mb-3">
+              <a href="#" class="text-decoration-none text-muted"
+                >Forget Password?</a
+              >
+            </div>
+            <button class="btn btn-primary w-100 mb-3">Log In</button>
+
+            <div class="or-text">Or</div>
+
+            <button class="btn border social-login-btn w-100 mb-2">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/281/281764.png"
+                alt="Google"
+              />
+              Login with Google
+            </button>
+
+            <button class="btn border social-login-btn w-100">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                alt="Facebook"
+              />
+              Login with Facebook
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Hero Section -->
+    <section
+      class="hero-section d-flex align-items-center justify-content-center text-center text-white"
+    >
+      <div class="container">
+        <h1 class="hero-title fw-bold">Spare Parts</h1>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+
+    <section class="products-section py-5 px-4 px-lg-5">
+      <div class="container-fluid">
+        <!-- Search/Filter Bar -->
+        <div
+          class="search-bar-container container-fluid px-5"
+          data-aos="fade-up"
+        >
+          <div
+            class="row justify-content-between align-items-center gx-2 gy-3 search-bar-row"
+          >
+            <div class="col-lg-4 col-md-6">
+              <input
+                type="text"
+                class="form-control search-input"
+                placeholder="Search products..."
+              />
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+              <select class="form-select search-dropdown">
+                <option selected>Select Model</option>
+                <option>Model A</option>
+                <option>Model B</option>
+              </select>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+              <select class="form-select search-dropdown">
+                <option selected>Set a Price</option>
+                <option>Below ₹10,000</option>
+                <option>₹10,000 - ₹25,000</option>
+              </select>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12">
+              <button class="btn btn-danger w-100 search-btn">Search</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Heading -->
+        <div class="text-center mb-4">
+          <p class="text-danger mb-1 fw-semibold">Products</p>
+          <h2 class="fw-bold">Products from our store</h2>
+        </div>
+
+        <!-- Filters Button for Mobile -->
+        <div class="d-lg-none text-end mb-3">
+          <button
+            class="btn btn-outline-dark d-lg-none d-block mb-3"
+            data-bs-toggle="modal"
+            data-bs-target="#filtersModal"
+          >
+            <i class="fas fa-filter me-2"></i> Filters
+          </button>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="row">
+          <!-- Sidebar Filters -->
+          <aside class="col-lg-3 d-none d-lg-block">
+            <div class="border rounded p-3 bg-white">
+              <h5 class="fw-bold mb-3">Filters</h5>
+
+              <!-- Categories -->
+              <div class="mb-4">
+                <h6 class="fw-semibold">Categories</h6>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="vehicleMats"
+                  /><label class="form-check-label" for="vehicleMats"
+                    >Vehicle Mats</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="tyreWheel"
+                  /><label class="form-check-label" for="tyreWheel"
+                    >Tyre and Wheel</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="dashboard"
+                  /><label class="form-check-label" for="dashboard"
+                    >Dashboard Accessories</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="cleaners"
+                  /><label class="form-check-label" for="cleaners"
+                    >Vehicle Cleaners</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="styling"
+                  /><label class="form-check-label" for="styling"
+                    >Vehicle Styling</label
+                  >
+                </div>
+              </div>
+
+              <!-- Price Range -->
+              <div class="mb-4">
+                <h6 class="fw-semibold">Price</h6>
+                <div class="d-flex gap-2">
+                  <input type="text" class="form-control" placeholder="Min" />
+                  <input type="text" class="form-control" placeholder="Max" />
+                </div>
+              </div>
+
+              <!-- Brand -->
+              <div class="mb-4">
+                <h6 class="fw-semibold">Brand</h6>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="brand1"
+                  /><label class="form-check-label" for="brand1">Renith</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="brand2"
+                  /><label class="form-check-label" for="brand2">Otoryx</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="brand3"
+                  /><label class="form-check-label" for="brand3"
+                    >Mevolite</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="brand4"
+                  /><label class="form-check-label" for="brand4"
+                    >Autogram</label
+                  >
+                </div>
+              </div>
+
+              <!-- Customer Ratings -->
+              <div class="mb-4">
+                <h6 class="fw-semibold">Customer Ratings</h6>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="rate4"
+                  /><label class="form-check-label" for="rate4"
+                    >4 Star or Above</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="rate3"
+                  /><label class="form-check-label" for="rate3"
+                    >3 Star or Above</label
+                  >
+                </div>
+              </div>
+
+              <!-- Discount -->
+              <div>
+                <h6 class="fw-semibold">Discount</h6>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="discount50"
+                  /><label class="form-check-label" for="discount50"
+                    >50% or more</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="discount30"
+                  /><label class="form-check-label" for="discount30"
+                    >30% or more</label
+                  >
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Product Cards -->
+          <div class="col-lg-9" data-aos="fade-in">
+            <div class="row g-4">
+              <!-- Product Card Example -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 259.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">
+                      27 CM Car Wheels
+                    </h6>
+                    <p class="text-danger fw-bold">$230.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 273.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">
+                      Premium Brake Pad
+                    </h6>
+                    <p class="text-danger fw-bold">$150.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 260.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">Dashboard Mount</h6>
+                    <p class="text-danger fw-bold">$45.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 261.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">LED Headlight</h6>
+                    <p class="text-danger fw-bold">$89.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 262.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">
+                      All Weather Mats
+                    </h6>
+                    <p class="text-danger fw-bold">$59.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 263.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">
+                      Steering Wheel Cover
+                    </h6>
+                    <p class="text-danger fw-bold">$25.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 7 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 264.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">Car Shampoo</h6>
+                    <p class="text-danger fw-bold">$15.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 8 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 265.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">Rearview Mirror</h6>
+                    <p class="text-danger fw-bold">$18.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 9 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 266.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">Seat Covers</h6>
+                    <p class="text-danger fw-bold">$110.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 10 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 267.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">Engine Oil 5L</h6>
+                    <p class="text-danger fw-bold">$40.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 11 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 268.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">Car Perfume</h6>
+                    <p class="text-danger fw-bold">$12.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 12 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 269.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">LED Fog Light</h6>
+                    <p class="text-danger fw-bold">$49.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 13 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 270.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">Car Shampoo</h6>
+                    <p class="text-danger fw-bold">$15.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 14 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 271.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">Car Shampoo</h6>
+                    <p class="text-danger fw-bold">$15.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 15 -->
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="./images/Group 272.png"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-semibold mb-1">Car Shampoo</h6>
+                    <p class="text-danger fw-bold">$15.00</p>
+                    <button class="btn btn-danger btn-sm w-100 mb-2">
+                      Add to Cart
+                    </button>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Filters (Mobile) -->
+    <div
+      class="modal fade"
+      id="filtersModal"
+      tabindex="-1"
+      aria-labelledby="filtersModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="filtersModalLabel">Filters</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Insert same filters HTML here as in sidebar -->
+            <div class="mb-4">
+              <h6 class="fw-semibold">Categories</h6>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="vehicleMats"
+                /><label class="form-check-label" for="vehicleMats"
+                  >Vehicle Mats</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="tyreWheel"
+                /><label class="form-check-label" for="tyreWheel"
+                  >Tyre and Wheel</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="dashboard"
+                /><label class="form-check-label" for="dashboard"
+                  >Dashboard Accessories</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="cleaners"
+                /><label class="form-check-label" for="cleaners"
+                  >Vehicle Cleaners</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="styling"
+                /><label class="form-check-label" for="styling"
+                  >Vehicle Styling</label
+                >
+              </div>
+            </div>
+
+            <!-- Price Range -->
+            <div class="mb-4">
+              <h6 class="fw-semibold">Price</h6>
+              <div class="d-flex gap-2">
+                <input type="text" class="form-control" placeholder="Min" />
+                <input type="text" class="form-control" placeholder="Max" />
+              </div>
+            </div>
+
+            <!-- Brand -->
+            <div class="mb-4">
+              <h6 class="fw-semibold">Brand</h6>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="brand1"
+                /><label class="form-check-label" for="brand1">Renith</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="brand2"
+                /><label class="form-check-label" for="brand2">Otoryx</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="brand3"
+                /><label class="form-check-label" for="brand3">Mevolite</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="brand4"
+                /><label class="form-check-label" for="brand4">Autogram</label>
+              </div>
+            </div>
+
+            <!-- Customer Ratings -->
+            <div class="mb-4">
+              <h6 class="fw-semibold">Customer Ratings</h6>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="rate4"
+                /><label class="form-check-label" for="rate4"
+                  >4 Star or Above</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="rate3"
+                /><label class="form-check-label" for="rate3"
+                  >3 Star or Above</label
+                >
+              </div>
+            </div>
+
+            <!-- Discount -->
+            <div>
+              <h6 class="fw-semibold">Discount</h6>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="discount50"
+                /><label class="form-check-label" for="discount50"
+                  >50% or more</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="discount30"
+                /><label class="form-check-label" for="discount30"
+                  >30% or more</label
+                >
+              </div>
+            </div>
+            <!-- You can reuse the same structure or wrap it in a reusable component via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer" data-aos="fade-out">
+      <div class="footer-container">
+        <!-- Column 1: Logo & Newsletter -->
+        <div class="footer-col">
+          <h2 class="footer-logo"><span>C</span> <strong>AUTOCAR X</strong></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam
+            justo nec ligula eleifend efficitur.
+          </p>
+
+          <h4>Subscribe to our newsletter</h4>
+          <form class="footer-form">
+            <input type="email" placeholder="Enter Your E-Mail" required />
+            <button type="submit">Subscribe Now</button>
+          </form>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contactUs.html">Contact Us</a></li>
+            <li><a href="./sparePart.html">Spare Parts</a></li>
+            <li><a href="./services.html">Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Address -->
+        <div class="footer-col">
+          <h4>Address</h4>
+          <p>(323) 661-3953</p>
+          <p>3506 Madera Ave</p>
+          <p>Los Angeles, California(CA), 90039</p>
+        </div>
+
+        <!-- Column 4: Social -->
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Autocar X. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="./sparePart.js"></script>
+  </body>
+</html>
