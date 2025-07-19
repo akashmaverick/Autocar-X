@@ -222,7 +222,11 @@
               style="position: absolute; top: 100%; left: 0"
               aria-labelledby="mobileProfileDropdown"
             >
-              <li><a class="dropdown-item text-danger" href="./index.html">Logout</a></li>
+              <li>
+                <a class="dropdown-item text-danger" href="./index.html"
+                  >Logout</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -230,7 +234,6 @@
     </header>
 
     <!-- LOGIN MODAL -->
-
     <div class="modal fade" id="loginModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content login-form">
@@ -258,15 +261,21 @@
               placeholder="Password*"
               required
             />
-            <div class="d-flex justify-content-end mb-3">
-              <a href="#" class="text-decoration-none text-muted"
-                >Forget Password?</a
-              >
+            <div class="d-flex justify-content-end mb-2">
+              <a href="#" class="text-decoration-none text-muted">
+                Forget Password?
+              </a>
             </div>
-            <button class="btn btn-primary w-100 mb-3">Log In</button>
 
-            <div class="or-text">Or</div>
+            <!-- Reduced bottom margin for tighter layout -->
+            <button class="btn login-main-btn w-100 mb-2">
+              <a href="./loginHome.html" class="internal-login">Log In</a>
+            </button>
 
+            <!-- Reduced margin around OR -->
+            <div class="or-text text-center my-2">Or</div>
+
+            <!-- Consistent margin below both buttons -->
             <button class="btn border social-login-btn w-100 mb-2">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/281/281764.png"

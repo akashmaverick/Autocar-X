@@ -239,6 +239,19 @@ body {
   margin-bottom: 12px;
 }
 
+/* login button modal */
+
+.login-main-btn {
+  background-color: #ff3737;
+  color: #fff;
+  border: none;
+}
+
+.login-main-btn:hover {
+  background-color: #e03030;
+  color: #fff;
+}
+
 /* Hero Section */
 
 .hero-section {

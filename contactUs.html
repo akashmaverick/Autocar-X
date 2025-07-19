@@ -174,7 +174,6 @@
     </header>
 
     <!-- LOGIN MODAL -->
-
     <div class="modal fade" id="loginModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content login-form">
@@ -202,18 +201,21 @@
               placeholder="Password*"
               required
             />
-            <div class="d-flex justify-content-end mb-3">
-              <a href="#" class="text-decoration-none text-muted"
-                >Forget Password?</a
-              >
+            <div class="d-flex justify-content-end mb-2">
+              <a href="#" class="text-decoration-none text-muted">
+                Forget Password?
+              </a>
             </div>
 
-            <button class="btn btn-primary w-100 mb-3">
+            <!-- Reduced bottom margin for tighter layout -->
+            <button class="btn login-main-btn w-100 mb-2">
               <a href="./loginHome.html" class="internal-login">Log In</a>
             </button>
 
-            <div class="or-text">Or</div>
+            <!-- Reduced margin around OR -->
+            <div class="or-text text-center my-2">Or</div>
 
+            <!-- Consistent margin below both buttons -->
             <button class="btn border social-login-btn w-100 mb-2">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/281/281764.png"
@@ -233,7 +235,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- ✅ Hero Section -->
     <section
       class="hero-section d-flex align-items-center justify-content-center text-center text-white"

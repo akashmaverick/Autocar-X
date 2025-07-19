@@ -28,7 +28,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
     />
-    
+
     <link
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
@@ -234,7 +234,6 @@
     </header>
 
     <!-- LOGIN MODAL -->
-
     <div class="modal fade" id="loginModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content login-form">
@@ -262,15 +261,21 @@
               placeholder="Password*"
               required
             />
-            <div class="d-flex justify-content-end mb-3">
-              <a href="#" class="text-decoration-none text-muted"
-                >Forget Password?</a
-              >
+            <div class="d-flex justify-content-end mb-2">
+              <a href="#" class="text-decoration-none text-muted">
+                Forget Password?
+              </a>
             </div>
-            <button class="btn btn-primary w-100 mb-3">Log In</button>
 
-            <div class="or-text">Or</div>
+            <!-- Reduced bottom margin for tighter layout -->
+            <button class="btn login-main-btn w-100 mb-2">
+              <a href="./loginHome.html" class="internal-login">Log In</a>
+            </button>
 
+            <!-- Reduced margin around OR -->
+            <div class="or-text text-center my-2">Or</div>
+
+            <!-- Consistent margin below both buttons -->
             <button class="btn border social-login-btn w-100 mb-2">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/281/281764.png"
@@ -364,7 +369,6 @@
       </div>
     </section>
     <!-- Contact-map -->
-
     <section
       class="contact-address-section py-5 bg-white"
       data-aos="fade-up"
@@ -408,28 +412,33 @@
             </div>
           </div>
 
-          <!-- Fancy Google Map Popup Trigger -->
+          <!-- Map Image with Fancybox -->
           <div
             class="col-lg-6 text-center"
             data-aos="zoom-in-up"
             data-aos-delay="100"
             data-aos-duration="800"
           >
-            <div class="fancy-map-popup-box mx-auto">
-              <p class="mb-3 fw-semibold">View Our Location on Map</p>
+            <div class="map-image-box mx-auto">
               <a
                 data-fancybox
                 data-type="iframe"
-                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27423726826!2d-118.69192018458324!3d34.020161306858654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c0638e1d1c5f%3A0x7ba812fae6b76d4e!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sin!4v1651599878213!5m2!1sen!2sin"
-                class="fancy-map-btn"
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27482717215!2d-118.69192035954878!3d34.02016130569311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c0b0e4e7458d%3A0x53b899fef546e87!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1721383268000!5m2!1sen!2sin"
               >
-                📍 Open Google Map
+                <img
+                  src="./images/Rectangle 61.png"
+                  alt="Google Map of Los Angeles"
+                  width="668"
+                  height="500"
+                  class="img-fluid rounded"
+                />
               </a>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
     <!-- FOOTER -->
 
     <footer class="site-footer" data-aos="fade-in">
