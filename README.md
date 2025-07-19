@@ -64,8 +64,7 @@ Open `index.html` in your browser or use **Live Server** in your code editor to 
 **Akash Kumar Mistry**  
 HTML Frontend Developer  
 📍 Kolkata, West Bengal  
-📧 akashmistry77@gmail.com  
-📞 +91 9330431053  
+📧 akashmistry77@gmail.com   
 [LinkedIn](https://www.linkedin.com/in/akash-mistry26)  
 [GitHub](https://github.com/akashmaverick)
 
