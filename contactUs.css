@@ -288,20 +288,24 @@ body {
   }
 }
 
-/* Fancy-Map */
-
-.fancy-map-box {
-  background: linear-gradient(135deg, #f0f8ff 0%, #e8f0fe 100%);
-  padding: 20px;
-  border-radius: 20px;
-  transform: scale(1.02);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
-  max-width: 100%;
+/* Fancy Map Button Style */
+.fancy-map-btn {
+  display: inline-block;
+  background-color: #0f62fe;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(15, 98, 254, 0.3);
+  transition: all 0.3s ease;
 }
 
-.map-frame {
-  border-radius: 15px;
+.fancy-map-btn:hover {
+  background-color: #0047b3;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 /* FOOTER */

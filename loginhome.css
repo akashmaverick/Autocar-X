@@ -456,7 +456,6 @@ body {
 }
 
 /* Why Choose Us Section */
-
 .why-choose-us-section {
   background-color: #f1f1f1;
   padding-block: 100px;
@@ -472,6 +471,7 @@ body {
 .icon-img {
   width: 70px;
   height: 70px;
+  object-fit: contain;
 }
 
 .why-choose-us-section h2 {
@@ -487,6 +487,7 @@ body {
   position: relative;
   overflow: hidden;
   transition: color 0.3s ease;
+  display: inline-block;
 }
 
 .why-choose-us-section .btn-liquid::before {
